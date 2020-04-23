@@ -1,9 +1,7 @@
 name: CD
 on: [push]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
     runs-on: ubuntu-18.04
     container: 
@@ -14,10 +12,6 @@ jobs:
         uses: actions/checkout@v1
       - name: build
         run: jbake -b
-  deploy:
-    runs-on: ubuntu-18.04
-    needs: [build]
-    steps:
       - name: Upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
         with:
