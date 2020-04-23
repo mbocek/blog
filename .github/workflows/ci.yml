@@ -15,3 +15,5 @@ jobs:
         uses: docker://javastreets/jbake:2.6.4
         with:
           args: jbake -b
+        env: 
+          JBAKE_USER: root
