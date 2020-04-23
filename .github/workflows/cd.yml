@@ -15,7 +15,7 @@ jobs:
       - name: upload ftp
         uses: sebastianpopp/ftp-action@releases/v2
         with:
-          host: ftpx.forpsi.com
+          host: ${{ secrets.FTP_SERVER }}
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: "output"
