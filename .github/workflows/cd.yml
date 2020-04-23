@@ -12,10 +12,11 @@ jobs:
         uses: actions/checkout@v1
       - name: build
         run: jbake -b
+  deploy:
+    runs-on: ubuntu-18.04
+    container: 
+      image: docker://
+      options: --user 1001
+    steps:
       - name: upload ftp
-        uses: sebastianpopp/git-ftp-action@releases/v3
-        with:
-          url: ftp://ftpx.forpsi.com/subdoms/blog
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          syncroot: output
+        run: ncftpput -u ${{ secrets.FTP_USERNAME }} -p ${{ secrets.FTP_PASSWORD }} -v -m -R -r 10 ftpx.forpsi.com /subdoms/blog/ /data/.
