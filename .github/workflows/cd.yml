@@ -20,3 +20,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: "output"
           remoteDir: "/subdoms/blog"
+
