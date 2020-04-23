@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
+      - name: checkout
+        uses: actions/checkout@v1
       - name: build
-        run: jbake -h
-      - uses: docker://javastreets/jbake:2.6.4
+        uses: docker://javastreets/jbake:2.6.4
+        with:
+          args: jbake -s
