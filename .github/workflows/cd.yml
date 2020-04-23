@@ -15,7 +15,7 @@ jobs:
       - name: upload ftp
         uses: sebastianpopp/git-ftp-action@releases/v3
         with:
-          host: ftp://ftpx.forpsi.com/subdoms/blog
+          url: ftp://ftpx.forpsi.com/subdoms/blog
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           syncroot: output
