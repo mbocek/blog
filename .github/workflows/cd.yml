@@ -17,7 +17,6 @@ jobs:
     needs: build
     container: 
       image: docker://takatakato/ncftp
-      options: --user 1001
     steps:
       - name: upload ftp
         run: ncftpput -u ${{ secrets.FTP_USERNAME }} -p ${{ secrets.FTP_PASSWORD }} -v -m -R -r 10 ftpx.forpsi.com /subdoms/blog/ /data/.
