@@ -16,10 +16,12 @@ jobs:
     runs-on: ubuntu-18.04
     needs: build
     container: 
-      image: docker://takatakato/ncftp
+      #image: docker://takatakato/ncftp
+      image: docker://mwienk/docker-lftp
       env: 
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
     steps:
       - name: upload ftp
-        run: ncftpput -u "${FTP_USERNAME}" -p "${FTP_PASSWORD}" -v -m -R -r 10 ftpx.forpsi.com /subdoms/blog/ /data/.
+        #run: ncftpput -u "${FTP_USERNAME}" -p "${FTP_PASSWORD}" -v -m -R -r 10 ftpx.forpsi.com /subdoms/blog/ /data/.
+        run: lftp -e "mirror -R output /subdoms/blog" -u "${FTP_USERNAME}","${FTP_PASSWORD}" ftpx.forpsi.com
