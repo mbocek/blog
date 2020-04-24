@@ -35,4 +35,4 @@ jobs:
       - run: echo $HOME; pwd 
       - name: upload ftp
         #run: ncftpput -u "${FTP_USERNAME}" -p "${FTP_PASSWORD}" -v -m -R -r 10 ftpx.forpsi.com /subdoms/blog/ /data/.
-        run: lftp -e "mirror -R output /subdoms/blog" -u "${FTP_USERNAME}","${FTP_PASSWORD}" ftpx.forpsi.com
+        run: lftp -e "mirror -R jbake-output /subdoms/blog" -u "${FTP_USERNAME}","${FTP_PASSWORD}" ftpx.forpsi.com
