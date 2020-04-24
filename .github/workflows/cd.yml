@@ -18,8 +18,8 @@ jobs:
     container: 
       image: docker://takatakato/ncftp
       env: 
-        FTP_USERNAME: "${{ secrets.FTP_USERNAME }}"
-        FTP_PASSWORD: "${{ secrets.FTP_PASSWORD }}"
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
     steps:
       - name: upload ftp
-        run: ncftpput -u ${FTP_USERNAME} -p ${FTP_PASSWORD} -v -m -R -r 10 ftpx.forpsi.com /subdoms/blog/ /data/.
+        run: ncftpput -u "${FTP_USERNAME}" -p "${FTP_PASSWORD}" -v -m -R -r 10 ftpx.forpsi.com /subdoms/blog/ /data/.
