@@ -8,11 +8,11 @@ jobs:
       image: docker://javastreets/jbake:2.6.4 
       options: --user 1001
     steps:
-      - name: checkout
+      - name: Checkout sources
         uses: actions/checkout@v1
-      - name: build
+      - name: Build blog
         run: jbake -b
-      - name: upload jbake output
+      - name: Upload output
         uses: actions/upload-artifact@v1
         with:
           name: jbake-output
@@ -21,18 +21,14 @@ jobs:
     runs-on: ubuntu-18.04
     needs: build
     container: 
-      #image: docker://takatakato/ncftp
       image: docker://mwienk/docker-lftp
       env: 
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
     steps:
-      - name: download jbake output
+      - name: Download output
         uses: actions/download-artifact@v1
         with:
           name: jbake-output
-      - run: ls -la .
-      - run: echo $HOME; pwd 
-      - name: upload ftp
-        #run: ncftpput -u "${FTP_USERNAME}" -p "${FTP_PASSWORD}" -v -m -R -r 10 ftpx.forpsi.com /subdoms/blog/ /data/.
+      - name: Upload ftp
         run: lftp -e "mirror -R jbake-output /subdoms/blog" -u "${FTP_USERNAME}","${FTP_PASSWORD}" ftpx.forpsi.com
