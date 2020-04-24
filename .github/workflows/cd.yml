@@ -22,4 +22,4 @@ jobs:
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
     steps:
       - name: upload ftp
-        run: ncftpput -u "syamzone" -p "NvL4n5gE3W" -v -m -R -r 10 ftpx.forpsi.com /subdoms/blog/ /data/.
+        run: ncftpput -u "${FTP_USERNAME}" -p "${FTP_PASSWORD}" -v -m -R -r 10 ftpx.forpsi.com /subdoms/blog/ /data/.
