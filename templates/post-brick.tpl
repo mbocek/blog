@@ -3,7 +3,7 @@ div(class:"row"){
         include template: 'date-brick.tpl'
     }
     div{
-        h2{
+        h1{
             a(href:"${config.site_contextPath}${post.uri}","${post.title}")
         }
         include template: 'tags-brick.tpl'
