@@ -12,16 +12,16 @@ nav(class:"navbar navbar-expand-lg navbar-dark bg-dark fixed-top") {
                     }
                 }
                 li(class:"nav-item"){
-                    a(class:"nav-link", href:"${config.site_contextPath}index.html","Home")
+                    a(class:"nav-link", href:"${config.site_contextPath}index.html","Domov")
                 }
                 li(class:"nav-item"){
-                    a(class:"nav-link", href:"${config.site_contextPath}${config.archive_file}","Archive")
+                    a(class:"nav-link", href:"${config.site_contextPath}${config.archive_file}","Archív")
                 }
                 li(class:"nav-item"){
-                    a(class:"nav-link", href:"${config.site_contextPath}about.html","About")
+                    a(class:"nav-link", href:"${config.site_contextPath}about.html","O blogu")
                 }
                 li(class:"nav-item"){
-                    a(class:"nav-link", href:"${config.site_contextPath}${config.feed_file}","Subscribe")
+                    a(class:"nav-link", href:"${config.site_contextPath}${config.feed_file}","Odber")
                 }
             }
         }
