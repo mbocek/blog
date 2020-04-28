@@ -7,14 +7,14 @@ status=published
 
 ## Ako zistiť hostname v linuxe
 Zmeniť hostname v linuxe je pomerne jednoduché. Na začiatku by sme si ho však mali najprv zobraziť.
-```shell
+```console
 $ hostname
 demo
 ```
 > v mojom prípade je hostname demo
 
 V prípade, že chcem viac detailov o danom počítači môžem použiť príkaz
-```shell
+```console
 $ hostnamectl
    Static hostname: demo
          Icon name: computer-vm
@@ -29,7 +29,7 @@ $ hostnamectl
 
 ## Zmena hostname v linuxe
 A teraz poďme zmeniť hostname. Budeme menit hostname na *new-demo*
-```shell
+```console
 $ sudo hostnamectl set-hostname new-demo
 ```
 >je potrebné eskalovať práva cez sudo, prípadne prihlásiť sa ako root
@@ -37,7 +37,7 @@ $ sudo hostnamectl set-hostname new-demo
 ## Kontrola hostname v linuxe
 Následne by sa malo stačiť odhlásiť a prihlásiť. Nová session by mala už obsahovať zmenený hostname. Prípadne môžme reštartovať daný počítač.
 Len pre kontrolu:
-```shell
+```console
 $ hostnamectl
    Static hostname: new-demo
          Icon name: computer-vm
