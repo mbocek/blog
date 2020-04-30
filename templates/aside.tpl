@@ -1,6 +1,6 @@
-div() {
+div(class:"p-3 bg-light rounded") {
     h4("Archív")
-    div(class:"pl-3") {
+    div(class:"pl-3 bg-light") {
         def last_month=null
         published_posts.each {post ->
             if (last_month) {
