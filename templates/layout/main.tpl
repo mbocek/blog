@@ -10,6 +10,13 @@ html(lang:'en'){
         include template: 'menu.tpl'
 
         div(class:"container") {
+            div(class:"jumbotron"){
+                h1("${config.blog_title}")
+                newLine()
+                p("${config.blog_subtitle}")
+                newLine()
+            }
+
             bodyContents()
         }
         newLine()

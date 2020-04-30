@@ -4,19 +4,19 @@ layout 'layout/main.tpl', true,
 
             div(class:"row"){
                 div(class:"col"){
-                    h1("Blog Archive")
-
+                    h1("Archív blogu")
+                    hr(class:"separator")
                     def last_month=null
                     published_posts.each {post ->
                         if (last_month) {
                             if (post.date.format("MMMM yyyy") != last_month) {
                                 yieldUnescaped "</ul>"
-                                h4("${post.date.format("MMMM yyyy")}")
+                                h4(class:"separator", "${post.date.format("MMMM yyyy")}")
                                 yieldUnescaped "<ul>"
                             }
                         }
                         else {
-                            h4("${post.date.format("MMMM yyyy")}")
+                            h4(class:"separator", "${post.date.format("MMMM yyyy")}")
                             yieldUnescaped "<ul>"
                         }
 

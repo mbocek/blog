@@ -11,14 +11,38 @@ blockquote p {
 }
 
 body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
+    padding-top: 70px;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 1em;
     height: 40px;
     line-height: 40px;
     background-color: #e9ecef;
+}
+
+hr {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.separator {
+    margin-top: 1rem;
+}
+
+.summary {
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.datebrick {
+    white-space: nowrap;
+}
+
+h1 a {
+    color: black;
+}
+
+h2 {
+    margin-top: 1em;
 }

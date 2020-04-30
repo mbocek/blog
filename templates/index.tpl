@@ -1,13 +1,24 @@
 layout 'layout/main.tpl', true,
         bodyContents: contents {
-            published_posts[0..0].each { post ->
-                model.put('post', post)
-                include template: 'post-brick.tpl'
+
+            div(class: "row") {
+                div(class: "col-md-8") {
+                    published_posts[0..0].each { post ->
+                        model.put('post', post)
+                        include template: 'post-brick-short.tpl'
+                        if (post != published_posts.last()) {
+                            hr()
+                        }
+                    }
+                }
+                aside(class: "col-md-4") {
+                    include template: 'aside.tpl'
+                }
             }
 
-            div(class:"container text-right"){
-                hr()
-                yield "Older post are available in the "
-                a(href:"${config.site_contextPath}${config.archive_file}","archive")
+            hr()
+            div(class:"container text-right separator"){
+                yield "Staršie články sú dostupné v "
+                a(href:"${config.site_contextPath}${config.archive_file}","archíve")
             }
         }

@@ -20,7 +20,7 @@ layout 'layout/main.tpl', true,
                     }
                 }
             }
-            hr()
+            hr(class:"separator")
             div(class:"row") {
                 div(class:"col") {
                     h2("${tag}")
