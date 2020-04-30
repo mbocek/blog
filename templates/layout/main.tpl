@@ -18,9 +18,9 @@ html(lang:'en'){
             }
 
             bodyContents()
+            newLine()
+            include template: 'footer.tpl'
         }
-        newLine()
-        include template: 'footer.tpl'
 
         script(src:"${config.site_contextPath}js/vendor/jquery-3.4.1.min.js"){}newLine()
         script(src:"${config.site_contextPath}js/vendor/bootstrap.bundle.min.js"){}newLine()
