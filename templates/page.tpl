@@ -5,10 +5,20 @@ layout 'layout/main.tpl', true,
                     h2("${content.title}")
 
                     time(datetime:"${content.date.format('yyyy-MM-dd')}"){
-                        small("${content.date.format('dd.MM.yyyy')}")
+                        p("${content.date.format('dd.MM.yyyy')}")
                     }
-                    hr()
-
+                }
+            }
+            if (content.summary) {
+                div(class:"row"){
+                    div(class:"col") {
+                        p(class:"summary", "${content.summary}")
+                    }
+                }
+            }
+            hr()
+            div(class:"row"){
+                div(class:"col") {
                     yieldUnescaped content.body
                 }
             }

@@ -1,6 +1,4 @@
-span("${post.date?.format("MMM")}")
-newLine()
-span("${post.date?.format("dd")}")
-newLine()
-span("${post.date?.format("yyyy")}")
+time(datetime:"${post.date?.format('yyyy-MM-dd')}"){
+    p("${post.date?.format('dd.MM.yyyy')}")
+}
 newLine()
