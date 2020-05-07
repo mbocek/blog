@@ -45,7 +45,7 @@ h2 {
     margin-top: 1em;
 }
 
-/* add rounded eges for code highlighter  */
+/* add rounded eges for code highlighter */
 pre code, pre div {
     border-radius: .25rem!important;
 }
