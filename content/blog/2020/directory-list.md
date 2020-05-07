@@ -1,8 +1,9 @@
+
 title=Ako zobraziť obsah adresára v linuxe
 summary=Ukážeme si, ako zobraziť obsah adresára v linuxe a prípadne rôzne varianty príkazu pre zobrazenie obsahu adresára.
 date=2020-05-01
 type=post
-tags=blog,linux,ls
+tags=linux,ls
 status=published
 ~~~~~~
 

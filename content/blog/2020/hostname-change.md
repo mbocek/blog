@@ -2,7 +2,7 @@ title=Zmena hostnamu v linuxe
 summary=V tomto blogposte si ukážeme, ako jednoducho zmeniť hostname v linuxovom systéme prostredníctvom štandardne dostupných príkazov.
 date=2020-04-19
 type=post
-tags=blog,linux,hostname,hostnamectl
+tags=linux,hostname,hostnamectl
 status=published
 ~~~~~~
 
