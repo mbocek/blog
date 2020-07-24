@@ -3,7 +3,7 @@ layout 'layout/main.tpl', true,
 
             div(class: "row") {
                 div(class: "col-md-8") {
-                    published_posts[0..1].each { post ->
+                    published_posts[0..3].each { post ->
                         model.put('post', post)
                         include template: 'post-brick-short.tpl'
                         if (post != published_posts.last()) {
