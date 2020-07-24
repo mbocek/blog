@@ -3,7 +3,7 @@ title=Ako zobraziť zoznam bežiacich procesov v linuxe
 summary=V tomto blogposte by som chcel prejsť možnosti, ako sa v linuxe dá zobraziť zoznam bežiacich procesov.
 date=2020-07-24
 type=post
-tags=linux,ps,top,htop
+tags=linux,ps,top
 status=published
 ~~~~~~
 
