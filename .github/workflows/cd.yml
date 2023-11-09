@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     container: 
-      image: docker://javastreets/jbake:2.6.4 
+      image: docker://jbake/jbake:2.6.7
       options: --user 1001
     steps:
       - name: Checkout sources
